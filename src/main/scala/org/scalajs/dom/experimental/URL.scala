@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation._
  */
 @js.native
 @JSGlobal
-class URL(url: String, base: String = js.native) extends js.Object {
+class URL(url: String, base: String) extends js.Object {
+  def this(url: String) = this(url, js.native)
 
   /**
    * Returns a DOMString containing the origin of the URL, that is its scheme,
